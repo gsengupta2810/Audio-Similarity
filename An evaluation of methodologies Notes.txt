@@ -1,0 +1,29 @@
+Similarity between short art clips of indian music.
+Task involves :-
+extraction of relevent melodic representations from audio singanls and appropriate choice of representation.
+The similarity measure should be invariant of pitch transpositions and global tempo variations. 
+For hindustani music, extracts semi-automatically generated predominant pitch contours.
+Convert pitch values from Hertz to Cents, to make representation musically more relevant.
+Analyze the effect of various sampling rates on representation.
+	
+Transposition invariance :
+5 techniqes tested to achieve transposition invariance
+1> normalizing pitch values by the tonic ferq of the lead artist. Considering it as the base freq in Hertz to Cents
+2> Zero mean normalization
+3> Zero median normalization
+4> Z-Normalization
+5> Median Absolute Deviation Normalization
+
+Experimentation with quantizing the pitch values. Quantization in semitone level and and quarter tone level
+
+Uniform Time Scaling:
+Typical approach is to consider multiple uniformly time-scaled versions of the patterns. 
+Can be done using interpolation. Cubic interpolation is used.
+
+Similarity Computation:
+Two catagories of commonly used distance measures: 
+Euclidian distance : Non parametric distance measure. 
+Dynamic Time Warping based distance : has many variants and parameters to select. Whole Sequence matching DTW used with two possibilities of local constraints- 1> without local constraints 2> with local constraints
+
+
+

@@ -1,0 +1,16 @@
+Locally sensitive Hashing:
+Arbitrarily take hyperplanes in search space and divide the space into positive and negative sides(1&0)
+All points which lie in 1 side will get a bit 1 else the bit is 0
+This is repeated again and again and generate a bitcode/ buckets in the space.
+
+Find the hamming distance :h (number of non-similar bits in two points)
+Signature (bitstring ) lenth :b (number of bits in the bitcode) 
+Cos distance(angluar distance between two points )= cos(PI*b/h)
+
+This divides the space into buckets. Each bucket has similar points.
+Now go into a bucket and do exact comparisions between each points to eleminate false positives. 
+Then the process is repeated with different set of hyperplane combinations for l times, to avoid mis catagorization of any point into a wrong bucket. 
+
+Example: 
+Finding duplicate of a point in search space. Do the bucketing l different times. Find the duplicates in all the cases.
+O(log N) where N is the total number of points in dataset in the above case. 
